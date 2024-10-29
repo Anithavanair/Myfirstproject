@@ -1,0 +1,32 @@
+<!-- Sample HTML Template for an Angular App -->
+<div class="container">
+    <h1 class="title">Product Rate Calculator</h1>
+  
+    <div class="dropdown-container">
+      <label for="rate-dropdown">Select Rate Plan:</label>
+      <!-- <select id="rate-dropdown" [(ngModel)]="selectedRate" (change)="onRateChange($event)">
+        <option *ngFor="let rate of rateOptions" [value]="rate.value">{{ rate.label }}</option>
+      </select> -->
+    </div>
+  
+    <div class="data-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Premium</th>
+            <th>Select</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.name }}</td>
+            <td>{{ product.premium }}</td>
+            <td>
+              <button (click)="selectProduct(product)" [class.selected]="product.selected">Select</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
